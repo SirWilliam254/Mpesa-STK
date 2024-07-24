@@ -5,7 +5,7 @@ const app = express();
 
 //import routes...............................................
 const TokenRoute = require("./routes/token");
-const callbackRouter = require("./routes/callbackSTK");
+const callbackRouter = require("./controller/callbackSTK");
 
 
 // Use libraries..............................................
@@ -15,7 +15,7 @@ app.use(cors());
 
 // Use Routes................................................
 app.use("/token", TokenRoute);
-app.use('/callback', callbackRouter);
+app.use("/callback", callbackRouter);
 
 
 //---------------------------------------------------------------------------------------------------App Running...
